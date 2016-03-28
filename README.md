@@ -15,7 +15,7 @@
 
 ```npm run dev ```
 
-打开http://localhost:777/进行预览
+打开http://localhost:7777进行预览
 
 # lesson one  搭建reactjs+webpack开发环境
 
