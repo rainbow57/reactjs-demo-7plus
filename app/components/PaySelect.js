@@ -21,6 +21,7 @@ import NavigationClose from 'material-ui/lib/svg-icons/navigation/close';
 import FontIcon from 'material-ui/lib/font-icon';
 const Weixin_url = 'https://pay.weixin.qq.com/wiki/doc/api/jsapi.php?chapter=7_1';
 const Zhifubao_url='https://b.alipay.com/order/productDetail.htm?productId=2015110218008816';
+
 export default class  PaySelect extends React.Component{
 
     constructor(props){
@@ -126,7 +127,7 @@ const styles = {
         marginRight:20,
     },
     button:{
-        marginTop:50,
+        marginTop:40,
         marginLeft:20,
         marginRight:20,
     }

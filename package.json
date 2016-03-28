@@ -7,8 +7,9 @@
     "build": "webpack",
     "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build"
   },
-  "author": "hammer",
+  "author": "hammercui",
   "license": "ISC",
+
   "dependencies": {
     "babel-runtime": "^6.5.0",
     "react": "^0.14.7",

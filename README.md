@@ -5,7 +5,19 @@
 
 >推荐一个学习[视频网站](http://www.ejiakt.com/album/show/211)
 
-## lesson one  搭建reactjs+webpack开发环境
+# 如何运行
 
-## lesson two  使用material-ui作为项目的ui
+安装
+
+```npm intall ```
+
+编译并运行
+
+```npm run dev ```
+
+打开http://localhost:777/进行预览
+
+# lesson one  搭建reactjs+webpack开发环境
+
+# lesson two  使用material-ui作为项目的ui
 
