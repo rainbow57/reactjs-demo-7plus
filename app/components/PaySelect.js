@@ -56,7 +56,7 @@ export default class  PaySelect extends React.Component{
                         <Divider/>
                         <ListItem primaryText='购买数量' rightToggle={<h2>1</h2>}/>
                         <Divider/>
-                        <ListItem primaryText='项目单价' rightToggle={<h2>55元</h2>}/>
+                        <ListItem primaryText='项目单价' rightToggle={<h2>5元</h2>}/>
                         <Divider/>
                         <ListItem primaryText='总价' rightToggle={<h2>55元</h2>}/>
                     </List>

@@ -11,7 +11,11 @@
 
 ```npm intall ```
 
-编译并运行
+运行开发模式
+
+```npm run dev ```
+
+生产环境打包
 
 ```npm run dev ```
 
@@ -21,3 +25,6 @@
 
 # lesson two  使用material-ui作为项目的ui
 
+# lesson three 重构项目分配开发生产环境
+
+由于在开发过程中配置文件使用了动态加载，在生产环境配置文件要做相应的修改，具体教程参见blog[react基础：react0.14.7+webpack开发生产环境的区别](http://hammercui.github.io/post/react%E5%9F%BA%E7%A1%80%EF%BC%9Areact-webpack%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA2%EF%BC%9A%E5%BC%80%E5%8F%91%E7%94%9F%E4%BA%A7%E7%8E%AF%E5%A2%83%E7%9A%84%E6%90%AD%E5%BB%BA/);

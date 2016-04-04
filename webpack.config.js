@@ -25,8 +25,8 @@ module.exports = {
     //入口文件输出配置
     //output: {path: __dirname+'_build_', filename: '[name].js'}
     output:{
-        path: path.resolve(__dirname,'build'),
-        filename: 'build.js'
+        path: path.resolve(__dirname,'dev'),
+        filename: 'dev.js'
     },
 
     devServer: {
