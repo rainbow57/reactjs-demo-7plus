@@ -3,6 +3,13 @@
  * 生产环境配置文件
  */
 var webpack = require('webpack');
+/*
+ //公共部分单独打包
+* @param 1  将公共模块提取，生成名为 common 的chunk
+* @param 2  最终生成的公共模块的 js 文件名
+* @param 3  公共模块提取的资源列表
+*/
+
 var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common','common.js');
 var path = require('path');
 
@@ -10,22 +17,33 @@ var node_modules = path.resolve(__dirname, 'node_modules');
 var pathToReact = path.resolve(node_modules, 'react/dist/react.min.js');
 
 module.exports = {
+    devtool: false,
     //插件项
     plugins: [
-        //commonsPlugin,
-        new webpack.NoErrorsPlugin()
+        commonsPlugin,  //公共部分单独打包
+        new webpack.NoErrorsPlugin(),//跳过error
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false,
+            }
+        }),
+        //开启production模式
+        new webpack.DefinePlugin({
+            'process.env': {NODE_ENV:  JSON.stringify("production")}
+        })
+        
     ],
     //页面入口文件配置
-    //entry: {mian : './app/main.js'},
-    entry:[
-        path.resolve(__dirname,'app/main.js')
-    ],
-
+    entry: {
+        main : path.resolve(__dirname,'app/main.js'),
+        //material_ui:['material-ui']
+    },
+    
     //入口文件输出配置
-    //output: {path: __dirname+'_build_', filename: '[name].js'}
     output:{
         path: path.resolve(__dirname,'build'),
-        filename: 'build.js'
+        filename: "[name].min.js",   //// 输出文件名
+        chunkFilename: "[name].chunk.min.js"          // 异步加载时需要被打包的文件名
     },
 
     module: {
@@ -65,5 +83,10 @@ module.exports = {
             //'react': pathToReact,
             // 'react-dom':pathToReactDom,
         }
+
+    },
+    //外部方式引入第三方库
+    externals: {
+        'amazeui-react':"amazeui-react",
     }
 };
